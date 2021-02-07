@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<link rel = 'stylesheet', type = 'text/css' href = "{% static 'css/main.css' %}">
+<div class  = 'row'>
+    <div class = 'col-md'>
+        <div class  = 'card card-body'>
+            <h5>Update Order</h5>
+            <hr>
+    <form action = "", method = 'post'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-outline-info">Submit</button>
+    </form>
+    {% endblock %}
+            </div>
+        </div> 
+    </div>

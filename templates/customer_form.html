@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class = 'row'>
+    <div class = 'col-md'>
+        <div class = 'card card-body'>
+            <h5>Create Customer</h5>
+            <hr>
+            <form action = "", method = 'post'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class = 'btn btn-outline-info' type = 'submit'>Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
